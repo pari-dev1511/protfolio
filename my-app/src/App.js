@@ -6,9 +6,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+      <h1 className="text-sm font-bold">Hello, Tailwind + React! 🚀</h1>
+    </div>
         <a
           className="App-link"
           href="https://reactjs.org"
