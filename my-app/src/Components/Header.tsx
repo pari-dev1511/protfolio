@@ -49,7 +49,7 @@ function Header() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="sticky" sx={{ top: 0, zIndex: 1100, backgroundColor: 'primary.main' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
