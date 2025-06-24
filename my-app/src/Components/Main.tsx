@@ -5,7 +5,6 @@ const Main = ({ name }: { name: any }) => {
  
 
   return (
-    
       <Typography variant="h3" sx={{
         height: "150px",
         backgroundColor: "#1976d2",
@@ -13,7 +12,6 @@ const Main = ({ name }: { name: any }) => {
         alignItems: "center",
         justifyContent: "center",
         color: "white",
-       
         px: { xs: 2.5 }, // 20px on small screens
       }}>
         {name}

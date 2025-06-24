@@ -45,7 +45,7 @@ const ResumeCard: React.FC<ResumeCardProps> = ({title, year, company, descriptio
         },
       }}
     >
-      <Typography component="p" sx={{ fontWeight: 600 }}>
+      <Typography component="h6" sx={{ fontWeight: 500 }}>
         {title}
       </Typography>
 

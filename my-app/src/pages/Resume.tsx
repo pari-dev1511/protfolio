@@ -1,8 +1,9 @@
 import React from "react";
-import Main from "../Components/Main";
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import ResumeCard from "../Components/ResumeCard";
 import SkillBar from "../Components/SkillBar";
+import PageLayout from "../Components/PageLayout";
+import SectionTitle from "../Components/SectionTitle";
 
 const Resume: React.FC<any> = () => {
   const EducationData = [
@@ -52,19 +53,10 @@ const Resume: React.FC<any> = () => {
   const rightSkill = skills.slice(5);
 
   return (
-    <Container maxWidth="lg">
-      <Box
-        component="section"
-        sx={{
-          backgroundColor: "#fff",
-          borderRadius: 4,
-          overflow: "hidden",
-          mt: 5,
-        }}
-      >
-        <Main name="Resume" />
-        <Box sx={{ background: "#2b2a2a", p: 5 }}>
-          <Grid container spacing={2}>
+    <PageLayout name="Resume" Contant={
+    <> 
+    {/* Education & Experience */}
+    <Grid container spacing={2}>
             <Grid size={{ xs: 12, md: 6 }}>
               <Typography variant="h5" sx={{ mb: 3 }}>
                 Education
@@ -98,12 +90,8 @@ const Resume: React.FC<any> = () => {
               </Box>
             </Grid>
           </Grid>
-        </Box>
-        {/* Skill Section */}
-        <Box sx={{ p: 5, pt: 0 , background: "#2b2a2a" }}>
-          <Typography variant="h5" sx={{ mb: 3 }}>
-            My <span style={{ color: "#1976d2" }}>Skills</span>
-          </Typography>
+        {/* Skill Section */}  
+       <SectionTitle text="My" highlight="Skills" mb={3} mt={5} color="#1976d2"/>  
           <Grid container spacing={2}>
             <Grid size={{ xs: 12, md: 6 }}>
               {leftSkill.map((skill) => (
@@ -125,10 +113,9 @@ const Resume: React.FC<any> = () => {
               ))}
             </Grid>
           </Grid>
-        </Box>
-      </Box>
-    </Container>
+          </>
+          } 
+          />
   );
 };
-
 export default Resume;
